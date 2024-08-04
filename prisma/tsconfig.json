@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "es2020", // Change target to a more modern version if possible
+    "allowJs": true, // Allows JavaScript files to be compiled
+    "skipLibCheck": true, // Skips type checking of declaration files (.d.ts)
+    "strict": true, // Enables all strict type-checking options
+    "forceConsistentCasingInFileNames": true, // Disallow inconsistently-cased references to the same file.
+    "noEmit": true, // Prevents the compiler from writing output files
+    "esModuleInterop": true, // Enables compatibility between CommonJS and ES modules
+    "module": "esnext", // Sets the module system to ESNext (ES Modules)
+    "moduleResolution": "node", // Resolve modules in the Node.js style
+    "resolveJsonModule": true, // Allows importing JSON modules
+    "isolatedModules": true, // Ensures each file can be safely transpiled without relying on other files
+    "incremental": true, // Enables incremental compilation
+    "baseUrl": ".", // Base directory to resolve non-relative module names
+    "paths": {
+      "@/*": ["./*"] // Aliases @/ to the root directory
+    },
+    "strictNullChecks": true, // Enables strict null checks
+    "jsx": "react", // If you're using React, make sure JSX is set up correctly
+    "lib": ["es2020", "dom"], // Include the DOM library and ECMAScript 2020
+    "types": ["node"] // Include type definitions for Node.js
+  },
+  "include": ["**/*.ts", "**/*.tsx"], // Include TypeScript and TSX files
+  "exclude": ["node_modules", "**/*.test.ts", "**/*.spec.ts"] // Exclude node_modules and test files
+}
