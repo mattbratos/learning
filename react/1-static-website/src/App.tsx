@@ -1,25 +1,28 @@
-import Header from "./components/Header.tsx";
-import Footer from "./components/Footer.tsx";
-import Feed from "./components/Feed.tsx";
-import Button from "./components/Button.tsx";
-import Student from "./components/Student.tsx";
-import UserYo from "./components/UserYo.tsx";
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import routes from './config/routerConfig'
 
 function App() {
-  return (
-    <>
-      <Header />
-      <Button />
-      <UserYo isLoggedIn={true} username="yomama" />
-      <UserYo isLoggedIn={false} username="yomama" />
-      <Student name="John" id={1} isEnrolled={true} />
-      <Student name="Adam" id={2} isEnrolled={false} />
-      <Student />
-
-      <Feed />
-      <Footer />
-    </>
-  );
+    return (
+        <Router>
+            <div className='flex flex-col min-h-screen'>
+                <Header />
+                <main className='flex-grow'>
+                    <Routes>
+                        {routes.map((route, index) => (
+                            <Route
+                                key={index}
+                                path={route.path}
+                                element={<route.element />}
+                            />
+                        ))}
+                    </Routes>
+                </main>
+                {/* <Footer /> */}
+            </div>
+        </Router>
+    )
 }
 
-export default App;
+export default App

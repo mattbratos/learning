@@ -1,23 +1,33 @@
+import { Link } from 'react-router-dom'
+import { navItems } from '../config/navConfig'
+
 export default function Header() {
-  return (
-    <header>
-      <h1>React App</h1>
-      <nav>
-        <ul>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/about">About</a>
-          </li>
-          <li>
-            <a href="/services">Services</a>
-          </li>
-          <li>
-            <a href="/contact">Contact</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-  );
+    return (
+        <header>
+            <div className=' mx-auto'>
+                <div className='flex items-center justify-between h-16 mb-8'>
+                    <Link
+                        to='/'
+                        className='text-4xl text-white font-bold'
+                    >
+                        React App
+                    </Link>
+                    <nav>
+                        <ul className='flex space-x-4'>
+                            {navItems.map((item, index) => (
+                                <li key={index}>
+                                    <Link
+                                        to={item.path}
+                                        className='py-2 px-3 hover:bg-gray-700 rounded transition duration-300'
+                                    >
+                                        {item.name}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+    )
 }
