@@ -22,11 +22,20 @@
     a {
         @apply text-blue-400 hover:text-blue-300 transition-colors duration-300;
     }
+    ul {
+        @apply list-disc pl-8;
+    }
+    ol {
+        @apply list-decimal pl-8;
+    }
+    button {
+        @apply cursor-pointer border-2 hover:bg-white hover:text-black text-white font-bold py-2 px-4 rounded;
+    }
 }
 
 @layer components {
     .box {
-        @apply my-10;
+        @apply border-2 p-4 rounded-md max-w-xl mb-8;
     }
     .container {
         @apply max-w-4xl mx-auto px-4;

@@ -1,16 +1,22 @@
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
+// src/App.tsx
+//
+
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { Toaster, toast } from 'sonner'
+
 import Header from './components/Header'
-import Footer from './components/Footer'
-import routes from './config/routerConfig'
+// import Footer from './components/Footer';
+import { config } from './config/config'
 
 function App() {
     return (
         <Router>
             <div className='flex flex-col min-h-screen'>
+                <Toaster />
                 <Header />
                 <main className='flex-grow'>
                     <Routes>
-                        {routes.map((route, index) => (
+                        {config.map((route, index) => (
                             <Route
                                 key={index}
                                 path={route.path}

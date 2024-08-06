@@ -1,5 +1,7 @@
+// src/components/Header.tsx
+
 import { Link } from 'react-router-dom'
-import { navItems } from '../config/navConfig'
+import { config } from '../config/config'
 
 export default function Header() {
     return (
@@ -14,8 +16,11 @@ export default function Header() {
                     </Link>
                     <nav>
                         <ul className='flex space-x-4'>
-                            {navItems.map((item, index) => (
-                                <li key={index}>
+                            {config.map((item, index) => (
+                                <li
+                                    className='list-none'
+                                    key={index}
+                                >
                                     <Link
                                         to={item.path}
                                         className='py-2 px-3 hover:bg-gray-700 rounded transition duration-300'
