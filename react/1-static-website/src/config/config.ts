@@ -8,6 +8,7 @@ import CardPage from '../pages/CardPage'
 import RenderingPage from '../pages/RenderingPage'
 import OnClickPage from '../pages/OnClickPage'
 import UseStatePage from '../pages/UseStatePage'
+import OnChange from '../components/OnChange'
 
 // Define the type for route items
 interface RouteItem {
@@ -26,5 +27,6 @@ export const config: RouteItem[] = [
     { name: 'Rendering', path: '/rendering', element: RenderingPage },
     { name: 'OnClick', path: '/onclick', element: OnClickPage },
     { name: 'UseState', path: '/usestate', element: UseStatePage },
+    { name: 'OnChange', path: '/onchange', element: OnChange },
 ]
 //UseState
