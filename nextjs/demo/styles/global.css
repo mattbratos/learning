@@ -1,0 +1,89 @@
+/* src/index.css or src/App.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-black text-white font-mono leading-relaxed p-8; /* Changed to mono font and added padding */
+  }
+  h1 {
+    @apply text-4xl font-bold mb-4;
+  }
+  h2 {
+    @apply text-3xl font-semibold mb-4;
+  }
+  h3 {
+    @apply text-2xl font-medium mb-3;
+  }
+  p {
+    @apply mb-4;
+  }
+  a {
+    @apply text-blue-400 hover:text-blue-300 transition-colors duration-300;
+  }
+  ul {
+    @apply list-disc pl-8;
+  }
+  ol {
+    @apply list-decimal pl-8;
+  }
+  button {
+    @apply cursor-pointer border-2 hover:bg-white hover:text-black text-white font-bold py-2 px-4 rounded;
+  }
+
+  textarea {
+    @apply border-2 p-2 rounded w-full outline-none bg-black;
+  }
+
+  select {
+    @apply border-2 p-2 rounded w-full outline-none bg-black text-white;
+  }
+  label {
+    @apply block mb-2 text-white w-full;
+  }
+}
+
+@layer components {
+  .box {
+    @apply border-2 p-4 rounded-md max-w-xl mb-8;
+  }
+  .container {
+    @apply max-w-4xl mx-auto px-4;
+  }
+  .btn {
+    @apply inline-block px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300;
+  }
+  .btn-primary {
+    @apply bg-blue-500 text-white hover:bg-blue-600;
+  }
+  .btn-secondary {
+    @apply bg-gray-700 text-white hover:bg-gray-600;
+  }
+
+  .card {
+    @apply border-2 rounded-lg p-4 mb-4;
+  }
+
+  .welcome-message {
+    @apply bg-lime-700;
+  }
+
+  .yomama-message {
+    @apply bg-red-700;
+  }
+
+  .i {
+    @apply border-2 p-2 rounded w-full outline-none bg-black;
+  }
+
+  .radio {
+    @apply border-2 p-2 rounded w-full outline-none bg-black;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+}
